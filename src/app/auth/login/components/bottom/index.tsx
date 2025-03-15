@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Text, TouchableHighlight, View } from "react-native";
+import { Text, Touchable, TouchableHighlight, TouchableWithoutFeedback, View } from "react-native";
 
 import { colors } from "@data/constants/colors";
 
@@ -14,9 +14,9 @@ export const Bottom: FC<props> = ({ showTerms }) => {
     <View style={styles["terms"]}>
       <Text style={styles["text"]}>Leia os</Text>
 
-      <TouchableHighlight onPress={showTerms}>
+      <TouchableWithoutFeedback onPress={showTerms}>
         <Text style={[styles["text"], { color: colors["primary-blue"], fontFamily: "Montserrat-Medium" }]}>Termos de Privacidade</Text>
-      </TouchableHighlight>
+      </TouchableWithoutFeedback>
     </View>
   );
 };
