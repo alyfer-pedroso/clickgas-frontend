@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { Text, Touchable, TouchableHighlight, TouchableWithoutFeedback, View } from "react-native";
+import { Text, TouchableWithoutFeedback, View } from "react-native";
 
-import { colors } from "@data/constants/colors";
+import { colors } from "@data/constants";
 
 import styles from "../../styles";
 

@@ -3,7 +3,7 @@ import { Text, TouchableHighlight, View } from "react-native";
 
 import { Feather } from "@expo/vector-icons";
 
-import { colors } from "@data/constants/colors";
+import { colors } from "@data/constants";
 import { buttonStyles } from "@components/styles";
 
 import styles from "../../styles";
