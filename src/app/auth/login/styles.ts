@@ -8,23 +8,38 @@ const styles = StyleSheet.create({
   },
   image: {
     position: "absolute",
-    top: "-8%",
+    top: 0,
   },
   "form-container": {
     backgroundColor: "white",
     borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
-    height: "55%",
+    height: "45%",
     paddingTop: 30,
     paddingHorizontal: 25,
   },
   form: {
     flex: 1,
+    justifyContent: "space-between",
   },
   title: {
     fontSize: 28,
     fontFamily: "Montserrat-Bold",
-    color: "#000000",
+  },
+  text: {
+    fontFamily: "Montserrat-Regular",
+    fontSize: 17,
+  },
+  terms: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: 4,
+    paddingBottom: 20,
+  },
+  "buttons-container": {
+    width: "100%",
+    gap: 12,
   },
 });
 
