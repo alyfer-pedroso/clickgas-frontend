@@ -1,0 +1,1 @@
+export { useUserTypeModal } from "./useUserTypeModal";

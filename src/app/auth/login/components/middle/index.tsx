@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Text, TouchableHighlight, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 
 import { Feather } from "@expo/vector-icons";
 
@@ -7,19 +7,24 @@ import { colors } from "@data/constants";
 import { buttonStyles } from "@components/styles";
 
 import styles from "../../styles";
+import { ModalModels } from "@/src/data/models";
 
-export const Middle: FC = () => {
+interface props {
+  userTypeModal: ModalModels.iData;
+}
+
+export const Middle: FC<props> = ({ userTypeModal }) => {
   return (
     <View style={styles["buttons-container"]}>
-      <TouchableHighlight style={buttonStyles["container"]}>
+      <TouchableOpacity style={buttonStyles["container"]}>
         <Text style={buttonStyles["text"]}>Entrar na minha conta</Text>
-      </TouchableHighlight>
+      </TouchableOpacity>
 
-      <TouchableHighlight style={[buttonStyles["container-outline"], { paddingVertical: 10 }]}>
+      <TouchableOpacity style={[buttonStyles["container-outline"], { paddingVertical: 10 }]} onPress={userTypeModal.show}>
         <Text style={buttonStyles["text-outline"]}>
           <Feather name="user" size={24} color={colors["primary-blue"]} /> Criar uma nova conta
         </Text>
-      </TouchableHighlight>
+      </TouchableOpacity>
     </View>
   );
 };
