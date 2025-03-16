@@ -4,10 +4,10 @@ import { Text, TouchableOpacity, View } from "react-native";
 import { Feather } from "@expo/vector-icons";
 
 import { colors } from "@data/constants";
+import { ModalModels } from "@data/models";
 import { buttonStyles } from "@components/styles";
 
 import styles from "../../styles";
-import { ModalModels } from "@/src/data/models";
 
 interface props {
   userTypeModal: ModalModels.iData;

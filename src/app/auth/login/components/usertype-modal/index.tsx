@@ -23,7 +23,7 @@ export const UserTypeModal = forwardRef<ModalModels.iData | null>((_, ref) => {
           <Text style={styles["title"]}>Selecione o tipo de conta</Text>
 
           <View style={styles["buttons-container"]}>
-            <Link style={buttonStyles["container-outline"]} href="/#">
+            <Link style={buttonStyles["container-outline"]} href="/auth/client-registration">
               <Text style={buttonStyles["text-outline"]}>Cliente</Text>
             </Link>
 
