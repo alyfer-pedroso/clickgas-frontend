@@ -7,15 +7,16 @@ const styles = StyleSheet.create({
     gap: 15,
   },
   header: {
-    gap: 12,
+    gap: 15,
     paddingTop: 25,
     marginHorizontal: 10,
+    marginBottom: 10,
   },
   "header-text": {
     fontFamily: "Montserrat-Medium",
     fontSize: 22,
     color: "#000000",
-    marginLeft: 8,
+    marginLeft: 15,
   },
   main: {
     flex: 1,

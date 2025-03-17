@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { StyleProp, Text, TouchableOpacity, View, ViewStyle } from "react-native";
 
 import { useRouter } from "expo-router";
 import { Entypo } from "@expo/vector-icons";
@@ -10,8 +10,9 @@ import { buttonStyles } from "@components/styles";
 import styles from "./styles";
 
 interface props {
-  header: { title: string; back?: boolean };
+  header: { title: string };
   button: { title: string; onClick: VoidFunction | (() => Promise<void>) };
+  main?: { styles?: StyleProp<ViewStyle> };
   children?: React.ReactNode;
 }
 
@@ -22,11 +23,9 @@ export const Registration: FC<props> = ({ ...props }) => {
   return (
     <View style={styles["container"]}>
       <View style={styles["header"]}>
-        {props.header.back && (
-          <TouchableOpacity onPress={goBack}>
-            <Entypo name="chevron-left" size={40} color={colors["primary-blue"]} />
-          </TouchableOpacity>
-        )}
+        <TouchableOpacity onPress={goBack}>
+          <Entypo name="chevron-left" size={40} color={colors["primary-blue"]} />
+        </TouchableOpacity>
         <Text style={styles["header-text"]}>{props.header.title}</Text>
       </View>
 
