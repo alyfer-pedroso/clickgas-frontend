@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   "phone-text": {
     fontFamily: "Montserrat-SemiBold",
   },
-  title: {
+  subtitle: {
     marginHorizontal: "auto",
     width: "45%",
     marginTop: "5%",
