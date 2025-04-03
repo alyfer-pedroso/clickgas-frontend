@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 
 import { Input, Registration } from "@components/template";
 
@@ -14,6 +14,7 @@ const ClientRegistration: FC = () => {
 
       <View style={styles["phone-container"]}>
         <View style={styles["phone-ddd"]}>
+          <Image source={require("@/assets/images/brazil-icon.png")} style={{ width: 25 }} />
           <Text style={styles["phone-text"]}>+55</Text>
         </View>
 

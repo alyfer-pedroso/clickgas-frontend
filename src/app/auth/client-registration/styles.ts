@@ -8,21 +8,24 @@ const styles = StyleSheet.create({
   },
   "phone-ddd": {
     width: 70,
+    flexDirection: "row",
     borderRadius: 10,
     backgroundColor: "#EEEEEE",
-    textAlign: "center",
     justifyContent: "center",
+    alignItems: "center",
+    gap: 5,
   },
   "phone-text": {
-    fontFamily: "Montserrat-Medium",
+    fontFamily: "Montserrat-SemiBold",
   },
   title: {
-    marginLeft: "24%",
-    width: "55%",
-    marginTop: 30,
+    marginHorizontal: "auto",
+    width: "45%",
+    marginTop: "5%",
     alignContent: "center",
     textAlign: "center",
     fontFamily: "Montserrat-Medium",
+    fontSize: 16,
   },
 });
 
