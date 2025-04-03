@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   main: {
     flex: 1,
     marginHorizontal: 22,
-    gap:20,
+    gap: 20,
   },
   footer: {
     alignSelf: "flex-end",
