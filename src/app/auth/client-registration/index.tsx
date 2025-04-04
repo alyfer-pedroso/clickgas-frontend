@@ -5,6 +5,7 @@ import { Input, Registration } from "@components/template";
 
 import styles from "./styles";
 import * as utils from "./utils";
+import { colors } from "@/src/data/constants";
 
 const ClientRegistration: FC = () => {
   return (
@@ -24,6 +25,8 @@ const ClientRegistration: FC = () => {
       <Input label="Senha" secureTextEntry />
 
       <Text style={styles["subtitle"]}>Onde você quer receber seu pedido?</Text>
+
+      <Text  style={[styles["subtitle"],{color: colors["primary-blue"], width: "100%", marginTop: "auto", opacity: 0.7}]}>O gás poderá enviar comunicações através do seu contato</Text>
     </Registration>
   );
 };

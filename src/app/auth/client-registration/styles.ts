@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     marginHorizontal: "auto",
-    width: "45%",
+    width: "60%",
     marginTop: "5%",
     alignContent: "center",
     textAlign: "center",
