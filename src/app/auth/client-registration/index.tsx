@@ -21,6 +21,8 @@ const ClientRegistration: FC = () => {
         <Input label="Telefone" containerStyle={{ width: "auto", flex: 1 }} />
       </View>
 
+      <Input label="Senha" secureTextEntry />
+
       <Text style={styles["subtitle"]}>Onde você quer receber seu pedido?</Text>
     </Registration>
   );
