@@ -1,0 +1,1 @@
+export { SupplierRegistrationProvider } from "./SupplierRegistration";
