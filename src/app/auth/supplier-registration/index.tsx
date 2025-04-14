@@ -7,7 +7,7 @@ import { Input, Registration } from "@components/template";
 import styles from "./styles";
 import * as utils from "./utils";
 
-const ClientRegistration: FC = () => {
+const SupplierRegistration: FC = () => {
   return (
     <Registration header={utils.REGISTRATION_HEADER} button={utils.REGISTRATION_BUTTON}>
       <Input label="Nome Completo *" />
@@ -22,15 +22,12 @@ const ClientRegistration: FC = () => {
         <Input label="Telefone *" containerStyle={{ width: "auto", flex: 1 }} />
       </View>
 
+      <Input label="CNPJ" />
       <Input label="Senha *" secureTextEntry />
 
-      <Text style={styles["subtitle"]}>Onde você quer receber seu pedido?</Text>
-
-      <Text style={[styles["subtitle"], { color: colors["primary-blue"], width: "100%", marginTop: "auto", opacity: 0.7 }]}>
-        O gás poderá enviar comunicações através do seu contato
-      </Text>
+      <Text style={styles["subtitle"]}>Inclua o endereço do seu estabelecimento</Text>
     </Registration>
   );
 };
 
-export default ClientRegistration;
+export default SupplierRegistration;
