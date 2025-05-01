@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { StyleProp, Text, TouchableOpacity, View, ViewStyle } from "react-native";
+import { ScrollView, StyleProp, Text, TouchableOpacity, View, ViewStyle } from "react-native";
 
 import { useRouter } from "expo-router";
 import { Entypo } from "@expo/vector-icons";
@@ -21,7 +21,7 @@ export const Registration: FC<props> = ({ ...props }) => {
   const goBack = () => router.back();
 
   return (
-    <View style={styles["container"]}>
+    <ScrollView contentContainerStyle={styles["container"]}>
       <View style={styles["header"]}>
         <TouchableOpacity onPress={goBack}>
           <Entypo name="chevron-left" size={40} color={colors["primary-blue"]} />
@@ -36,6 +36,6 @@ export const Registration: FC<props> = ({ ...props }) => {
           <Text style={buttonStyles["text"]}>{props.button.title}</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </ScrollView>
   );
 };
