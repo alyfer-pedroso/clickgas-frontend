@@ -1,5 +1,5 @@
 import { FC, useEffect } from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, View } from "react-native";
 
 import { useCatalogSystem } from "../../hooks";
 
@@ -13,19 +13,21 @@ export const Catalog: FC = () => {
   }, []);
 
   return (
-    <ScrollView
-      horizontal
-      showsHorizontalScrollIndicator={false}
-      contentContainerStyle={{
-        flexDirection: "row",
-        gap: 16,
-        alignItems: "flex-start",
-        justifyContent: "center",
-      }}
-    >
-      {availableGas.map((gas) => (
-        <CatalogItem key={gas.id} {...gas} />
-      ))}
-    </ScrollView>
+    <View>
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{
+          flexDirection: "row",
+          gap: 16,
+          alignItems: "flex-start",
+          justifyContent: "center",
+        }}
+      >
+        {availableGas.map((gas) => (
+          <CatalogItem key={gas.id} {...gas} />
+        ))}
+      </ScrollView>
+    </View>
   );
 };

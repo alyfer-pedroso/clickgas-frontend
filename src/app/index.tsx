@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useFonts } from "expo-font";
 import { SplashScreen } from "expo-router";
 
-import ProductLinking from "./auth/product-linking";
+import Login from "./auth/login";
 
 export default function Root() {
   const [loaded, error] = useFonts({
@@ -39,5 +39,5 @@ export default function Root() {
 
   if (!loaded) return null;
 
-  return <ProductLinking />;
+  return <Login />;
 }

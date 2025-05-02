@@ -32,7 +32,7 @@ export const Registration: FC<props> = ({ ...props }) => {
         <Text style={styles["header-text"]}>{props.header.title}</Text>
       </View>
 
-      <View style={styles["main"]}>{props.children}</View>
+      <View style={[styles["main"], props.main?.styles]}>{props.children}</View>
 
       <View style={styles["footer"]}>
         <TouchableOpacity style={buttonStyles["container"]} onPress={props.button.onClick}>

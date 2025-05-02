@@ -1,14 +1,14 @@
 import { FC } from "react";
 
-import { Registration } from "@components/template";
-import { Catalog } from "../";
-
-// import styles from "./styles";
+import { Divisor, Registration } from "@components/template";
+import { Catalog, CurrentCatalog } from "../";
 
 export const Container: FC = () => {
   return (
-    <Registration header={{ title: "Vinculação de produtos" }} button={{ title: "Finalizar", onClick: () => {} }}>
+    <Registration header={{ title: "Vinculação de produtos" }} button={{ title: "Finalizar", onClick: () => {} }} main={{ styles: { gap: 25 } }}>
       <Catalog />
+      <Divisor />
+      <CurrentCatalog />
     </Registration>
   );
 };

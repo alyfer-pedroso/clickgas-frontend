@@ -3,7 +3,7 @@
     "id": 1,
     "nome": "Gas",
     "valor": 0,
-    "descricao": null,
+    "descricao": "Gás de cozinha",
     "peso": 10,
     "icone": null
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "nome": "Gas",
     "valor": 0,
-    "descricao": null,
+    "descricao": "Gás de cozinha",
     "peso": 20,
     "icone": null
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "nome": "Gas",
     "valor": 0,
-    "descricao": null,
+    "descricao": "Gás de cozinha",
     "peso": 13,
     "icone": null
   }
