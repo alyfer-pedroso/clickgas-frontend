@@ -1,14 +1,20 @@
-import { FC } from "react";
+import { FC, useCallback } from "react";
 import { Image, Text, View } from "react-native";
+import { RelativePathString, useRouter } from "expo-router";
 
-import { colors } from "@data/constants";
 import { AddressInput, Input, Registration } from "@components/template";
 
 import styles from "./styles";
 
-const ClientRegistration: FC = () => {
+export const Container: FC = () => {
+  const router = useRouter();
+
+  const nextPage = useCallback(() => {
+    router.push("../../../auth/product-linking");
+  }, []);
+
   return (
-    <Registration header={{ title: "Cadastro do cliente", goBack: "../../../auth/login" }} button={{ title: "Finalizar", onClick: () => {} }}>
+    <Registration header={{ title: "Cadastro do fornecedor" }} button={{ title: "Continuar", onClick: nextPage }}>
       <Input label="Nome Completo *" />
       <Input label="Email *" />
 
@@ -21,17 +27,12 @@ const ClientRegistration: FC = () => {
         <Input label="Telefone *" containerStyle={{ width: "auto", flex: 1 }} />
       </View>
 
+      <Input label="CNPJ" />
       <Input label="Senha *" secureTextEntry />
 
-      <Text style={styles["subtitle"]}>Onde você quer receber seu pedido?</Text>
+      <Text style={styles["subtitle"]}>Inclua o endereço do seu estabelecimento</Text>
 
       <AddressInput />
-
-      <Text style={[styles["subtitle"], { color: colors["primary-blue"], width: "100%", marginTop: "auto", opacity: 0.7 }]}>
-        O gás poderá enviar comunicações através do seu contato
-      </Text>
     </Registration>
   );
 };
-
-export default ClientRegistration;

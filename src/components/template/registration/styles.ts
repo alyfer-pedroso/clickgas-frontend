@@ -2,9 +2,10 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
     backgroundColor: "white",
     gap: 15,
+    minHeight: "100%",
   },
   header: {
     gap: 15,
@@ -21,6 +22,7 @@ const styles = StyleSheet.create({
   main: {
     flex: 1,
     marginHorizontal: 22,
+    gap: 20,
   },
   footer: {
     alignSelf: "flex-end",
