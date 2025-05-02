@@ -1,14 +1,20 @@
-import { FC } from "react";
+import { FC, useCallback } from "react";
 import { Image, Text, View } from "react-native";
+import { RelativePathString, useRouter } from "expo-router";
 
 import { AddressInput, Input, Registration } from "@components/template";
 
-import * as utils from "../../utils";
 import styles from "./styles";
 
 export const Container: FC = () => {
+  const router = useRouter();
+
+  const nextPage = useCallback(() => {
+    router.push("../../../auth/product-linking");
+  }, []);
+
   return (
-    <Registration header={utils.REGISTRATION_HEADER} button={utils.REGISTRATION_BUTTON}>
+    <Registration header={{ title: "Cadastro do fornecedor" }} button={{ title: "Continuar", onClick: nextPage }}>
       <Input label="Nome Completo *" />
       <Input label="Email *" />
 

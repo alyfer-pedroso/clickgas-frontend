@@ -30,7 +30,13 @@ export const AddressInput: FC<props> = ({ ...props }) => {
 
   return (
     <View style={styles["container"]}>
-      <SearchInput placeholder="Endereço e número" value={address.value} onChangeText={onChange} onSubmitEditing={showAddress} />
+      <SearchInput
+        placeholder="Endereço e número"
+        value={address.value}
+        onChangeText={onChange}
+        onSubmitEditing={showAddress}
+        editable={!address.show}
+      />
 
       {address.show && (
         <View style={styles["card"]}>

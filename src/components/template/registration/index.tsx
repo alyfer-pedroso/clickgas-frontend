@@ -1,7 +1,7 @@
-import { FC } from "react";
+import { FC, useCallback } from "react";
 import { ScrollView, StyleProp, Text, TouchableOpacity, View, ViewStyle } from "react-native";
 
-import { useRouter } from "expo-router";
+import { Href, useRouter } from "expo-router";
 import { Entypo } from "@expo/vector-icons";
 
 import { colors } from "@data/constants";
@@ -10,7 +10,7 @@ import { buttonStyles } from "@components/styles";
 import styles from "./styles";
 
 interface props {
-  header: { title: string };
+  header: { title: string; goBack?: Href };
   button: { title: string; onClick: VoidFunction | (() => Promise<void>) };
   main?: { styles?: StyleProp<ViewStyle> };
   children?: React.ReactNode;
@@ -18,7 +18,10 @@ interface props {
 
 export const Registration: FC<props> = ({ ...props }) => {
   const router = useRouter();
-  const goBack = () => router.back();
+
+  const goBack = useCallback(() => {
+    Boolean(props?.header?.goBack) ? router.push(props.header.goBack!) : router.back();
+  }, []);
 
   return (
     <ScrollView contentContainerStyle={styles["container"]}>
