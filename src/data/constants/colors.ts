@@ -3,4 +3,5 @@ export const colors = {
   "seconary-blue": "#809AAF",
   "primary-gray": "#EEEEEE",
   "secondary-gray": "#949494",
+  "third-gray": "#E8E8E8",
 };

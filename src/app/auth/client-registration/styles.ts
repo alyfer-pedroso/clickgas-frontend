@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   subtitle: {
     marginHorizontal: "auto",
     width: "60%",
-    marginTop: "5%",
+    marginTop: "2%",
     alignContent: "center",
     textAlign: "center",
     fontFamily: "Montserrat-Medium",

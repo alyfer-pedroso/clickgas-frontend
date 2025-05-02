@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Image, Text, View } from "react-native";
 
-import { Input, Registration } from "@components/template";
+import { AddressInput, Input, Registration } from "@components/template";
 
 import * as utils from "../../utils";
 import styles from "./styles";
@@ -25,6 +25,8 @@ export const Container: FC = () => {
       <Input label="Senha *" secureTextEntry />
 
       <Text style={styles["subtitle"]}>Inclua o endereço do seu estabelecimento</Text>
+
+      <AddressInput />
     </Registration>
   );
 };
