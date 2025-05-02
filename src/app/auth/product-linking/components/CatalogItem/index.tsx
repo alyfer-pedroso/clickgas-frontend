@@ -1,26 +1,30 @@
-import { FC, useState } from "react";
+import { FC, useMemo } from "react";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
 import { colors } from "@data/constants";
+import { Gas } from "@data/models/gas";
 
-// import styles from "./styles";
+import { useCatalogSystem } from "../../hooks";
 
-interface props {
-  selected?: boolean;
-}
+export const CatalogItem: FC<Gas> = ({ ...props }) => {
+  const { hasGasInCatalog, supplierCatalog, onHandleGas } = useCatalogSystem();
 
-export const CatalogItem: FC<props> = ({ ...props }) => {
-  const [selected, setSelected] = useState(props?.selected ?? false);
+  const selected = useMemo(() => hasGasInCatalog(props.id), [supplierCatalog]);
+  const image = useMemo(() => (props.icone ? { uri: props.icone } : require("@/assets/images/gas-icon.png")), []);
 
-  const onClick = () => setSelected((state) => !state);
+  const onClick = () => {
+    onHandleGas(props);
+  };
 
   return (
     <Pressable style={[styles["container"], selected && styles["container-selected"]]} onPress={onClick}>
       <View style={styles["icon-container"]}>
-        <Image source={require("@/assets/images/gas-icon.png")} style={styles["icon"]} />
+        <Image source={image} style={styles["icon"]} />
       </View>
 
-      <Text style={[styles["text"]]}>Gas 10kg</Text>
+      <Text style={[styles["text"]]}>
+        {props.nome} {props.peso}kg
+      </Text>
       <Text style={[styles["subtext"], selected && styles["subtext-selected"]]}>{selected ? "Excluir no catálogo" : "Incluir no catálogo"}</Text>
     </Pressable>
   );

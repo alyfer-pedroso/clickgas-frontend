@@ -1,8 +1,17 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { ScrollView } from "react-native";
+
+import { useCatalogSystem } from "../../hooks";
+
 import { CatalogItem } from "../CatalogItem";
 
 export const Catalog: FC = () => {
+  const { availableGas, getAvailableGas } = useCatalogSystem();
+
+  useEffect(() => {
+    getAvailableGas();
+  }, []);
+
   return (
     <ScrollView
       horizontal
@@ -12,13 +21,11 @@ export const Catalog: FC = () => {
         gap: 16,
         alignItems: "flex-start",
         justifyContent: "center",
-        // paddingTop: 20,
-        // paddingHorizontal: 5,
       }}
     >
-      <CatalogItem />
-      <CatalogItem selected />
-      <CatalogItem />
+      {availableGas.map((gas) => (
+        <CatalogItem key={gas.id} {...gas} />
+      ))}
     </ScrollView>
   );
 };

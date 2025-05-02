@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nome": "Gas",
+    "valor": 0,
+    "descricao": null,
+    "peso": 10,
+    "icone": null
+  },
+  {
+    "id": 2,
+    "nome": "Gas",
+    "valor": 0,
+    "descricao": null,
+    "peso": 20,
+    "icone": null
+  },
+  {
+    "id": 3,
+    "nome": "Gas",
+    "valor": 0,
+    "descricao": null,
+    "peso": 13,
+    "icone": null
+  }
+]

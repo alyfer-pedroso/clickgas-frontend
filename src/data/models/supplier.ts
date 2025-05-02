@@ -1,4 +1,4 @@
-export class SupplierRegistration {
+export class Supplier {
   constructor(
     public razaoSocial: string = "",
     public email: string = "",

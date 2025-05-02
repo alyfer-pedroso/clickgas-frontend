@@ -1,2 +1,2 @@
 export * as ModalModels from "./modal";
-export * as SupplierRegistrationModels from "./supplier-registration";
+export * as SupplierRegistrationModels from "./supplier";
