@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 
+import { Link } from "expo-router";
 import { Feather } from "@expo/vector-icons";
 
 import { colors } from "@data/constants";
@@ -16,9 +17,9 @@ interface props {
 export const Middle: FC<props> = ({ userTypeModal }) => {
   return (
     <View style={styles["buttons-container"]}>
-      <TouchableOpacity style={buttonStyles["container"]}>
+      <Link href="/auth/login" style={buttonStyles["container"]}>
         <Text style={buttonStyles["text"]}>Entrar na minha conta</Text>
-      </TouchableOpacity>
+      </Link>
 
       <TouchableOpacity style={[buttonStyles["container-outline"], { paddingVertical: 10 }]} onPress={userTypeModal.show}>
         <Text style={buttonStyles["text-outline"]}>

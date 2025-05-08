@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     fontFamily: "Montserrat-Regular",
     fontSize: 17,
   },
-  bottom: {
+  terms: {
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
