@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Text, View, StyleSheet, ScrollView } from "react-native";
+import { Text, View, StyleSheet, ScrollView, StyleProp, ViewStyle, ScrollViewProps } from "react-native";
 
 import { usePathname } from "expo-router";
 import { Octicons, Feather } from "@expo/vector-icons";
@@ -11,6 +11,8 @@ import { LinkButton } from "./components";
 interface props {
   children?: React.ReactNode;
   title?: string;
+  style?: ScrollViewProps["style"];
+  contentContainerStyle?: ScrollViewProps["contentContainerStyle"];
 }
 
 export const MainPage: FC<props> = ({ children, ...props }) => {
@@ -24,7 +26,9 @@ export const MainPage: FC<props> = ({ children, ...props }) => {
         </View>
       )}
 
-      <ScrollView>{children}</ScrollView>
+      <ScrollView style={props?.style} contentContainerStyle={props?.style}>
+        {children}
+      </ScrollView>
 
       <View style={styles["bottom"]}>
         <LinkButton
