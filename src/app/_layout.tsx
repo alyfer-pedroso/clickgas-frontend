@@ -4,7 +4,7 @@ import { SafeAreaView } from "react-native";
 export default function RootLayout() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <Tabs tabBar={() => null}>
+      <Tabs tabBar={() => null} screenOptions={{ headerShown: false }}>
         <Tabs.Screen name="index" options={{ headerShown: false }} />
         <Tabs.Screen name="auth" options={{ headerShown: false }} />
       </Tabs>
