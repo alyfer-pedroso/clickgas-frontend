@@ -4,3 +4,4 @@ export { Input } from "./input";
 export { SearchInput } from "./search-input";
 export { AddressInput } from "./address-input";
 export { Divisor } from "./divisor";
+export { MainPage } from "./main-page";
